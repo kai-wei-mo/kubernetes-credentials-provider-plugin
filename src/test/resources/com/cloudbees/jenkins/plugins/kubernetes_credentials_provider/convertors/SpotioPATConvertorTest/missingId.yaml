@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: missing-id-spot-token
+  labels:
+    "jenkins.io/credentials-type": "spotPersonalAccessToken"
+type: Opaque
+data:
+  personalAccessToken: dGVzdC10b2tlbg==  # base64 for "test-token"
+  description: U3BvdCBwZXJzb25hbCBhY2Nlc3MgdG9rZW4gZnJvbSBLdWJlcm5ldGVz  # base64 for "Spot personal access token from Kubernetes"

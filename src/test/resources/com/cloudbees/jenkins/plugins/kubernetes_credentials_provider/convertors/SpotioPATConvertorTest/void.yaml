@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: void-spot-token
+  labels:
+    "jenkins.io/credentials-type": "spotPersonalAccessToken"
+type: Opaque
+data: {}

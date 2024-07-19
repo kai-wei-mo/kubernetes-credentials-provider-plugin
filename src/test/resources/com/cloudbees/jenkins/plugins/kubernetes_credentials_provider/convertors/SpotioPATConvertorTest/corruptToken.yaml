@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: corrupt-token-spot-token
+  labels:
+    "jenkins.io/credentials-type": "spotPersonalAccessToken"
+type: Opaque
+data:
+  personalAccessToken: !!binary "invalidbase64token"
+  credentialsId: dGVzdC1zcG90LXRva2Vu  # base64 for "test-spot-token"
+  description: U3BvdCBwZXJzb25hbCBhY2Nlc3MgdG9rZW4gZnJvbSBLdWJlcm5ldGVz  # base64 for "Spot personal access token from Kubernetes"
